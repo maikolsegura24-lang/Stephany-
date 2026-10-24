@@ -1,6 +1,5 @@
 name: Compilar APK de Stephany
-
-on:
+'on':
 workflow_dispatch:
 push:
 branches:
