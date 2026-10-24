@@ -1,38 +1,31 @@
+
 name: Compilar APK de Stephany
-
 'on':
-workflow_dispatch:
-push:
-branches:
-- main
-
+  workflow_dispatch:
+  push:
+    branches:
+      - main
 permissions:
-contents: read
-
+  contents: read
 jobs:
-build:
-runs-on: ubuntu-latest
-
-steps:
-  - name: Descargar proyecto
-    uses: actions/checkout@v4
-
-  - name: Configurar Java
-    uses: actions/setup-java@v4
-    with:
-      distribution: temurin
-      java-version: '17'
-
-  - name: Instalar Gradle
-    uses: gradle/actions/setup-gradle@v4
-    with:
-      gradle-version: '8.9'
-
-  - name: Compilar APK
-    run: gradle assembleDebug
-
-  - name: Guardar APK
-    uses: actions/upload-artifact@v4
-    with:
-      name: Stephany-APK
-      path: app/build/outputs/apk/debug/app-debug.apk
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar proyecto
+        uses: actions/checkout@v4
+      - name: Configurar Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Instalar Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+      - name: Compilar APK
+        run: gradle assembleDebug
+      - name: Guardar APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: Stephany-APK
+          path: app/build/outputs/apk/debug/app-debug.apk
