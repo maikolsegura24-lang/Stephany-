@@ -1,0 +1,33 @@
+STEPHANY PARA ANDROID — PROYECTO DE ANDROID STUDIO
+==================================================
+
+IMPORTANTE:
+Este ZIP es un proyecto Android que envuelve la demo de Stephany en una app de pantalla completa. No es un APK ya compilado. La demo que incluye es la versión 2D con perspectiva simulada, NO el juego 3D realista de calidad comercial.
+
+CÓMO GENERAR EL APK EN WINDOWS 11:
+1. Instala Android Studio desde https://developer.android.com/studio
+2. Extrae el ZIP completo en una carpeta fácil de encontrar.
+3. Abre Android Studio > Open y selecciona la carpeta StephanyAndroid extraída.
+4. Espera a que Gradle sincronice. Acepta instalar SDK Platform 35 si lo solicita.
+5. Para crear un APK: menú Build > Build Bundle(s) / APK(s) > Build APK(s).
+6. Cuando termine, pulsa Locate en la notificación de Android Studio. Normalmente estará en:
+   app/build/outputs/apk/debug/app-debug.apk
+7. Copia ese APK a tu teléfono y ábrelo para instalarlo. Puede que Android te pida permitir instalaciones desde esa fuente.
+
+REQUISITOS:
+- Windows 11
+- Android Studio reciente
+- Android SDK Platform 35 (o una versión compatible que Android Studio proponga)
+- Internet durante la primera sincronización de Gradle
+
+QUÉ INCLUYE:
+- Actividad Android de pantalla completa.
+- WebView local sin depender de servidor para cargar la demo.
+- Juego HTML incorporado en app/src/main/assets/index.html.
+- Orientación vertical.
+
+LIMITACIONES:
+- Esta envoltura hace que la demo se pueda instalar como una app de Android después de compilar.
+- No convierte automáticamente la demo en gráficos 3D reales.
+- No incluye modelos 3D profesionales, animaciones avanzadas, tienda, niveles completos ni publicación en Google Play.
+- Para publicar en Google Play normalmente se genera un Android App Bundle (AAB), y se deben cumplir las políticas actuales de Google Play.
